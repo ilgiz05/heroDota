@@ -1,20 +1,16 @@
 package com.example.lesson11.ui.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.lesson11.R
 import com.example.lesson11.base.BaseFragment
 import com.example.lesson11.databinding.FragmentSecondBinding
 
 
 class SecondFragment : BaseFragment<FragmentSecondBinding>() {
-
     override lateinit var binding: FragmentSecondBinding
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,6 +27,5 @@ class SecondFragment : BaseFragment<FragmentSecondBinding>() {
                 )
             )
         }
-
     }
 }

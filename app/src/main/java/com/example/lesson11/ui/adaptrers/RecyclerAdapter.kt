@@ -10,11 +10,11 @@ import com.example.lesson11.databinding.RecyclerviewItemBinding
 import com.example.lesson11.model.Model
 import com.example.lesson11.ui.click.ItemClick
 
-class RecyclerAdapter:
-    ListAdapter<Model, RecyclerAdapter.ViewHolder>(DiffUtilCallBack)
-{
+class RecyclerAdapter :
+    ListAdapter<Model, RecyclerAdapter.ViewHolder>(DiffUtilCallBack) {
 
     lateinit var itemClick: ItemClick
+
     fun onItemClickListener(itemClick: ItemClick) {
         this.itemClick = itemClick
     }
@@ -34,7 +34,6 @@ class RecyclerAdapter:
 
     inner class ViewHolder(private val binding: RecyclerviewItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-
         fun onBind(model: Model) {
             binding.oneTxText.text = model.name
             itemView.setOnClickListener {
@@ -53,6 +52,5 @@ class RecyclerAdapter:
             return oldItem === newItem
         }
     }
-
 }
 

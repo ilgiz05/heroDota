@@ -21,6 +21,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     private lateinit var viewModel: MainViewModel
     private val adapter = RecyclerAdapter()
     private val args: MainFragmentArgs by navArgs()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +30,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         return binding.root
     }
-
 
     private fun getDataFromSecondFragment() {
         viewModel.list.add(Model(args.name, args.name))
@@ -55,7 +55,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         viewModel.createData()
         viewModel.liveData.observe(viewLifecycleOwner) { list ->
             adapter.submitList(list)
-
         }
         getDataFromSecondFragment()
     }

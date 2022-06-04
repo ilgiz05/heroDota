@@ -18,5 +18,4 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/one_tx_text" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

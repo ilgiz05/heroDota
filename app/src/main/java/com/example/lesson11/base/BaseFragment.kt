@@ -5,9 +5,8 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
- abstract class BaseFragment<VB : ViewBinding> : Fragment(){
+abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     protected abstract val binding: VB
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
@@ -15,13 +14,7 @@ import androidx.viewbinding.ViewBinding
         setupListener()
     }
 
-    protected open fun setupViews() {
-
-    }
-
-    protected open fun setupReguest() {
-    }
-
-    protected open fun setupListener() {
-    }
+    protected open fun setupViews() {}
+    protected open fun setupReguest() {}
+    protected open fun setupListener() {}
 }
